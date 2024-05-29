@@ -106,6 +106,34 @@
             tapping-term-ms = <200>;
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
+
+        zz: zz {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ZZ";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
+        };
+
+        xx: xx {
+            compatible = "zmk,behavior-tap-dance";
+            label = "XX";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LC(X)>;
+        };
+
+        cc: cc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CC";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LC(C)>;
+        };
+
+        vv: vv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VV";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LC(V)>;
+        };
     };
 
     macros {
@@ -123,10 +151,10 @@
         Base {
             label = "Base";
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E      &kp R  &kp T         &kp Y  &kp U  &kp I      &kp O    &kp P          &mo 5
-&kp LCTRL    &kp A  &kp S  &kp D      &kp F  &kp G         &kp H  &kp J  &kp K      &kp L    &kp SEMI       &kp ESC
-&shift_caps  &kp Z  &kp X  &kp C      &kp V  &kp B         &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
-             &mo 2  &none  &kp ENTER  &mo 1  &kp LEFT_WIN                &kp SPACE  &none    &kp RIGHT_ALT
+&kp TAB      &kp Q  &kp W  &kp E       &kp R  &kp T         &kp Y  &kp U  &kp I      &kp O    &kp P          &mo 5
+&kp LCTRL    &kp A  &kp S  &kp D       &kp F  &kp G         &kp H  &kp J  &kp K      &kp L    &kp SEMI       &kp ENTER
+&shift_caps  &zz    &xx    &cc         &vv    &kp B         &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
+             &mo 2  &none  &kp ESCAPE  &mo 1  &kp LEFT_WIN                &kp SPACE  &none    &kp RIGHT_ALT
             >;
         };
 
